@@ -99,7 +99,8 @@ var pets = [["Abyssal orphan","2020-06-22T22:06:00Z","5653","2560","Abyssal Spac
             ["Herbi","2023-02-11T17:01:00Z","14323","6500","Fossil Island","Skilling"],
             ["Lil' creator","2021-12-23T20:50:00Z","5928","12000","Western Sea","Minigame"],
             ["Sanguine dust","2022-05-20T02:40:13Z","92","275","Morytania","PvM"],
-            ["Metamorphic dust","2023-06-27T20:19:00Z","646","400","Great Kourend","PvM"]];
+            ["Metamorphic dust","2023-06-27T20:19:00Z","646","400","Great Kourend","PvM"],
+            ["Abyssal protector","2023-06-29T00:14:00Z","1340","4000","Eastern Sea","Minigame"]];
 
 var answers = ["Pet smoke devil",
                "Callisto cub",
@@ -107,6 +108,7 @@ var answers = ["Pet smoke devil",
                "Lil' creator",
                "Pet dagannoth supreme",
                "Vet'ion jr.",
+               "Abyssal protector",
                "Hellpuppy",
                "Pet dagannoth rex",
                "Tumeken's guardian",
@@ -237,7 +239,7 @@ function share()
   {
     $("#share-button").html("Share");
   }, 500);
-  $("#share-button").html("Copied!")
+  $("#share-button").html("Copied!");
 
   var $temp = $("<textarea>");
   $("body").append($temp);
