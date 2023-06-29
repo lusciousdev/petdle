@@ -1,0 +1,149 @@
+:root {
+  --global-max-width: 480px;
+
+  --border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px Arial;  
+}
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type=submit]:disabled {
+  background-color: grey;
+  color: #fff;
+  cursor: default;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.info-row {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, 1fr); */
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 2em;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 2em;
+  align-items: start;
+  grid-gap: 1em;
+  position: relative;
+  color: var(--color-text);
+  min-height: 100%;
+  padding: 1em;
+  width: 100%;
+  max-width: var(--global-max-width);
+  margin: 0 auto;
+}
+
+.game {
+  display: grid;
+  gap: 2em;
+  position: relative;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+  min-width: 200pt;
+}
+
+.info-value, .info-value-hidden {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.info-value-hidden {
+  filter: blur(5px);
+}
+.info-label {
+  color: grey;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+#info-day-val, #info-year-val, #info-percent-val, #info-region-val, #info-killcount-val, #info-type-val { 
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#share-button {  
+  width: 142px;
+  height: 36px;
+  background-color: rgb(83, 141, 78);
+  color: white;
+  border-color: white;
+  font-size: 18px;
+}
