@@ -15,7 +15,14 @@ body {
 /*the container must be positioned relative:*/
 .autocomplete {
   position: relative;
-  display: inline-block;
+  display: flex;
+  width: 100%;
+  max-width: var(--global-max-width);
+}
+
+.guess {
+  width: 100%;
+  max-width: var(--global-max-width);
 }
 
 input {
@@ -27,7 +34,8 @@ input {
 
 input[type=text] {
   background-color: #f1f1f1;
-  width: 100%;
+  flex: 1;
+  margin-right: 8px;
 }
 
 input[type=submit] {
@@ -89,16 +97,17 @@ input[type=submit]:disabled {
   position: relative;
   color: var(--color-text);
   min-height: 100%;
-  padding: 1em;
-  width: 100%;
+  width: var(--global-max-width);
   max-width: var(--global-max-width);
   margin: 0 auto;
 }
 
-.game {
+.game, .game-info {
   display: grid;
   gap: 2em;
   position: relative;
+  width: 100%;
+  max-width: var(--global-max-width);
 }
 
 .info {
@@ -112,27 +121,37 @@ input[type=submit]:disabled {
   flex-direction: column;
   text-align: left;
   position: relative;
-  min-width: 200pt;
+  flex: 1;
+  background-color: #f7f7f7;
+  padding: 6px 10px;
+  border-radius: 5px;
 }
 
 .info-value, .info-value-hidden {
   font-weight: 600;
   font-size: 1.2em;
 }
-.info-value-hidden {
+.info-value-hidden, .info-image-hidden {
   filter: blur(5px);
 }
 .info-label {
   color: grey;
 }
 
-.info-row {
+.info-row, .info-image, .info-image-hidden {
   display: flex;
   flex-direction: row;
   gap: 1em;
 }
 
-#info-day-val, #info-year-val, #info-percent-val, #info-region-val, #info-killcount-val, #info-type-val { 
+#info-day, #info-year, #info-percent, #info-region, #info-killcount, #info-type { 
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+#info-day-val, #info-year-val, #info-percent-val, #info-region-val, #info-killcount-val, #info-type-val, #info-image { 
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

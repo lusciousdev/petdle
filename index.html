@@ -16,6 +16,9 @@
           <h2>Guess the pet!</h2>
         </div>
         <div class="info">
+          <div id="info-image" class="info-image-hidden">
+            <img id="pet-image" src="./resources/images/black_square.png" title="" style="" height="250">
+          </div>
           <div class="info-row">
             <div class="info-item" id="info-day">
               <div class="info-label">Month/Day</div>
@@ -38,7 +41,7 @@
           </div>
           <div class="info-row">
             <div class="info-item" id="info-killcount">
-              <div class="info-label">Total killcount or XP</div>
+              <div class="info-label">Total killcount/XP/Points</div>
               <div class="info-value-hidden" id="info-killcount-val">XXXXX</div>
             </div>
             <div class="info-item" id="info-type">
@@ -49,11 +52,19 @@
         </div>
         <div class="guess">
           <form autocomplete="off" autocapitalize="off" onsubmit="return false;">
-            <div id="myAutocomplete" class="autocomplete" style="width:300px;">
+            <div id="myAutocomplete" class="autocomplete">
               <input id="myInput" type="text" name="pet-input" placeholder="Kalphite princess">
+              <input id="input-submit" type="submit" value="Guess!" onclick="javascript:submitGuess()">
             </div>
-            <input id="input-submit" type="submit" value="Guess!" onclick="javascript:submitGuess()">
         </div>
+      </div>
+      <div class="game-info">
+        <ul>
+          <li>Some killcounts and drop rates are rough approximations, especially skilling pets and Olmlet. Olmlet "killcount" will be given in a very very rough approximation of the total CoX points received.</li>
+          <li>Regions are from the OSRS Wiki, some are more useful than others.</li>
+          <li>Pet names in the autocomplete are the official names, not colloquial versions</li>
+          <li>If there are multiple versions of a boss I used the drop rate from the version where he got the drop.</li>
+        </ul>
       </div>
   </div>
   </body>

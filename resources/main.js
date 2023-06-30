@@ -64,43 +64,43 @@ var valid = [["Abyssal orphan","https://oldschool.runescape.wiki/images/Abyssal_
              ["Metamorphic dust","https://oldschool.runescape.wiki/images/Metamorphic_dust.png?ccf02"],
              ["Sanguine dust","https://oldschool.runescape.wiki/images/Sanguine_dust.png?7313d"]];
 
-var pets = [["Abyssal orphan","2020-06-22T22:06:00Z","5653","2560","Abyssal Space","PvM"],
-            ["Baby mole","2019-10-23T02:27:00Z","4871","3000","Asgarnia","PvM"],
-            ["Callisto cub","2019-03-11T14:47:00Z","2368","2000","Wilderness","PvM"],
-            ["Hellpuppy","2019-02-18T12:00:00Z","4261","3000","Asgarnia","PvM"],
-            ["Ikkle hydra","2019-01-13T22:26:00Z","181","3000","Great Kourend","PvM"],
-            ["Kalphite princess","2020-09-02T23:36:00Z","12429","3000","Kharidian Desert","PvM"],
-            ["Muphin","2023-01-18T23:20:00Z","450","2500","Troll Country","PvM"],
-            ["Little nightmare","2023-04-20T00:14:00Z","2066","1400","Morytania","PvM"],
-            ["Noon","2019-07-10T13:19:00Z","1559","3000","Morytania","PvM"],
-            ["Olmlet","2021-08-04T02:14:00Z","27000000","45982800","Great Kourend","PvM"],
-            ["Pet chaos elemental","2019-12-04T17:08:00Z","39","300","Wilderness","PvM"],
-            ["Pet dagannoth prime","2020-01-06T22:17:00Z","975","5000","Fremennik Province","PvM"],
-            ["Pet dagannoth rex","2019-10-24T03:17:00Z","796","5000","Fremennik Province","PvM"],
-            ["Pet dagannoth supreme","2020-04-24T21:55:00Z","1596","5000","Fremennik Province","PvM"],
-            ["Pet general graardor","2022-04-21T00:13:00Z","3881","5000","Troll Country","PvM"],
-            ["Pet k'ril tsutsaroth","2021-08-11T22:10:00Z","767","5000","Troll Country","PvM"],
-            ["Pet kraken","2019-04-21T21:44:00Z","6922","3000","Kandarin","PvM"],
-            ["Pet smoke devil","2021-04-18T23:38:00Z","15380","3000","Kandarin","PvM"],
-            ["Pet zilyana","2021-05-05T22:42:00Z","2892","5000","Troll Country","PvM"],
-            ["Phoenix","2019-08-17T15:58:00Z","952","1880","Great Kourend","Minigame"],
-            ["Prince black dragon","2019-03-20T12:00:00Z","798","3000","Wilderness","PvM"],
-            ["Smolcano","2023-03-14T17:48:00Z","3252","2250","Tirannwn","PvM"],
-            ["Sraracha","2021-03-22T23:42:00Z","4703","3000","Great Kourend","PvM"],
-            ["Tumeken's guardian","2022-09-01T01:55:00Z","88","1360","Kharidian Desert","PvM"],
-            ["Tzrek-jad","2019-04-23T21:05:00Z","16","67","Karamja","PvM"],
-            ["Vet'ion jr.","2023-05-10T00:59:00Z","1422","2800","Wilderness","PvM"],
-            ["Vorki","2019-03-28T16:35:00Z","1287","3000","Fremennik Province","PvM"],
-            ["Youngleff","2021-07-24T19:20:00Z","1317","800","Tirannwn","PvM"],
-            ["Beaver","2018-04-28T13:17:00Z","7090372","22260000","N/A","Skilling"],
-            ["Heron","2018-08-17T14:48:00Z","14700000","28270000","N/A","Skilling"],
-            ["Rock golem","2019-05-21T16:15:00Z","13900000","20000000","N/A","Skilling"],
-            ["Bloodhound","2019-09-16T22:55:00Z","275","1000","N/A","Other"],
-            ["Herbi","2023-02-11T17:01:00Z","14323","6500","Fossil Island","Skilling"],
-            ["Lil' creator","2021-12-23T20:50:00Z","5928","12000","Western Sea","Minigame"],
-            ["Sanguine dust","2022-05-20T02:40:13Z","92","275","Morytania","PvM"],
-            ["Metamorphic dust","2023-06-27T20:19:00Z","646","400","Great Kourend","PvM"],
-            ["Abyssal protector","2023-06-29T00:14:00Z","1340","4000","Eastern Sea","Minigame"]];
+var pets = [["Abyssal orphan",        "2020-06-22T22:06:00Z",     5653,     2560,      "Abyssal Space",      "PvM", "./resources/images/Abyssal_orphan.png",       "./resources/images/silhouettes/1.png"],
+            ["Baby mole",             "2019-10-23T02:27:00Z",     4871,     3000,           "Asgarnia",      "PvM", "./resources/images/Baby_Mole.png",            "./resources/images/silhouettes/4.png"],
+            ["Callisto cub",          "2019-03-11T14:47:00Z",     2368,     2000,         "Wilderness",      "PvM", "./resources/images/Callisto_cub.png",         "./resources/images/silhouettes/7.png"],
+            ["Hellpuppy",             "2019-02-18T12:00:00Z",     4261,     3000,           "Asgarnia",      "PvM", "./resources/images/Hellpuppy.png",            "./resources/images/silhouettes/17.png"],
+            ["Ikkle hydra",           "2019-01-13T22:26:00Z",      181,     3000,      "Great Kourend",      "PvM", "./resources/images/Ikkle_Hydra.png",          "./resources/images/silhouettes/20.png"],
+            ["Kalphite princess",     "2020-09-02T23:36:00Z",    12429,     3000,   "Kharidian Desert",      "PvM", "./resources/images/Kalphite_Princess.png",    "./resources/images/silhouettes/22.png"],
+            ["Muphin",                "2023-01-18T23:20:00Z",      450,     2500,      "Troll Country",      "PvM", "./resources/images/Muphin.png",               "./resources/images/silhouettes/29.png"],
+            ["Little nightmare",      "2023-04-20T00:14:00Z",     2066,     1400,          "Morytania",      "PvM", "./resources/images/Little_nightmare.png",     "./resources/images/silhouettes/28.png"],
+            ["Noon",                  "2019-07-10T13:19:00Z",     1559,     3000,          "Morytania",      "PvM", "./resources/images/Noon.png",                 "./resources/images/silhouettes/31.png"],
+            ["Olmlet",                "2021-08-04T02:14:00Z", 27000000, 45982800,      "Great Kourend",      "PvM", "./resources/images/Olmlet.png",               "./resources/images/silhouettes/32.png"],
+            ["Pet chaos elemental",   "2019-12-04T17:08:00Z",       39,      300,         "Wilderness",      "PvM", "./resources/images/Chaos_Elemental_Jr.png",   "./resources/images/silhouettes/8.png"],
+            ["Pet dagannoth prime",   "2020-01-06T22:17:00Z",      975,     5000, "Fremennik Province",      "PvM", "./resources/images/Dagannoth_Prime_Jr.png",   "./resources/images/silhouettes/10.png"],
+            ["Pet dagannoth rex",     "2019-10-24T03:17:00Z",      796,     5000, "Fremennik Province",      "PvM", "./resources/images/Dagannoth_Rex_Jr.png",     "./resources/images/silhouettes/11.png"],
+            ["Pet dagannoth supreme", "2020-04-24T21:55:00Z",     1596,     5000, "Fremennik Province",      "PvM", "./resources/images/Dagannoth_Supreme_Jr.png", "./resources/images/silhouettes/12.png"],
+            ["Pet general graardor",  "2022-04-21T00:13:00Z",     3881,     5000,      "Troll Country",      "PvM", "./resources/images/General_Graardor_Jr.png",  "./resources/images/silhouettes/14.png"],
+            ["Pet k'ril tsutsaroth",  "2021-08-11T22:10:00Z",      767,     5000,      "Troll Country",      "PvM", "./resources/images/K'ril_Tsutsaroth_Jr.png",  "./resources/images/silhouettes/25.png"],
+            ["Pet kraken",            "2019-04-21T21:44:00Z",     6922,     3000,           "Kandarin",      "PvM", "./resources/images/Kraken.png",               "./resources/images/silhouettes/23.png"],
+            ["Pet smoke devil",       "2021-04-18T23:38:00Z",    15380,     3000,           "Kandarin",      "PvM", "./resources/images/Smoke_Devil.png",          "./resources/images/silhouettes/41.png"],
+            ["Pet zilyana",           "2021-05-05T22:42:00Z",     2892,     5000,      "Troll Country",      "PvM", "./resources/images/Zilyana_Jr.png",           "./resources/images/silhouettes/53.png"],
+            ["Phoenix",               "2019-08-17T15:58:00Z",      952,     1880,      "Great Kourend", "Minigame", "./resources/images/Phoenix.png",              "./resources/images/silhouettes/34.png"],
+            ["Prince black dragon",   "2019-03-20T12:00:00Z",      798,     3000,         "Wilderness",      "PvM", "./resources/images/Prince_Black_Dragon.png",  "./resources/images/silhouettes/35.png"],
+            ["Smolcano",              "2023-03-14T17:48:00Z",     3252,     2250,           "Tirannwn",      "PvM", "./resources/images/Smolcano.png",             "./resources/images/silhouettes/42.png"],
+            ["Sraracha",              "2021-03-22T23:42:00Z",     4703,     3000,      "Great Kourend",      "PvM", "./resources/images/Sraracha.png",             "./resources/images/silhouettes/44.png"],
+            ["Tumeken's guardian",    "2022-09-01T01:55:00Z",       88,     1360,   "Kharidian Desert",      "PvM", "./resources/images/Tumeken's_Guardian.png",   "./resources/images/silhouettes/47.png"],
+            ["Tzrek-jad",             "2019-04-23T21:05:00Z",       16,       67,            "Karamja",      "PvM", "./resources/images/TzRek-Jad.png",            "./resources/images/silhouettes/48.png"],
+            ["Vet'ion jr.",           "2023-05-10T00:59:00Z",     1422,     2800,         "Wilderness",      "PvM", "./resources/images/Vet'ion_Jr.png",           "./resources/images/silhouettes/50.png"],
+            ["Vorki",                 "2019-03-28T16:35:00Z",     1287,     3000, "Fremennik Province",      "PvM", "./resources/images/Vorki.png",                "./resources/images/silhouettes/51.png"],
+            ["Youngleff",             "2021-07-24T19:20:00Z",     1317,      800,           "Tirannwn",      "PvM", "./resources/images/Youngleff.png",            "./resources/images/silhouettes/52.png"],
+            ["Beaver",                "2018-04-28T13:17:00Z",  7090372, 22260000,                "N/A", "Skilling", "./resources/images/Beaver.png",               "./resources/images/silhouettes/5.png"],
+            ["Heron",                 "2018-08-17T14:48:00Z", 14700000, 28270000,                "N/A", "Skilling", "./resources/images/Heron.png",                "./resources/images/silhouettes/19.png"],
+            ["Rock golem",            "2019-05-21T16:15:00Z", 13900000, 20000000,                "N/A", "Skilling", "./resources/images/Rock_golem.png",           "./resources/images/silhouettes/37.png"],
+            ["Bloodhound",            "2019-09-16T22:55:00Z",      275,     1000,                "N/A",    "Other", "./resources/images/Bloodhound.png",           "./resources/images/silhouettes/6.png"],
+            ["Herbi",                 "2023-02-11T17:01:00Z",    14323,     6500,      "Fossil Island", "Skilling", "./resources/images/Herbi.png",                "./resources/images/silhouettes/18.png"],
+            ["Lil' creator",          "2021-12-23T20:50:00Z",     5928,    12000,        "Western Sea", "Minigame", "./resources/images/Lil'_Creator.png",         "./resources/images/silhouettes/26.png"],
+            ["Sanguine dust",         "2022-05-20T02:40:13Z",       92,      275,          "Morytania",      "PvM", "./resources/images/Sanguine_dust.png",        "./resources/images/silhouettes/54.png"],
+            ["Metamorphic dust",      "2023-06-27T20:19:00Z",      646,      400,      "Great Kourend",      "PvM", "./resources/images/Metamorphic_dust.png",     "./resources/images/silhouettes/55.png"],
+            ["Abyssal protector",     "2023-06-29T00:14:00Z",     1340,     4000,        "Eastern Sea", "Minigame", "./resources/images/Abyssal_protector.png",    "./resources/images/silhouettes/2.png"]];
 
 var answers = ["Pet smoke devil",
                "Callisto cub",
@@ -159,47 +159,92 @@ if (!String.prototype.format) {
   };
 }
 
-function revealMonthDay()
+var infoBg = "#f7f7f7";
+
+function flashBackground(item, fromColor, toColor, duration)
+{
+  item.css("background-color", toColor);
+  setTimeout(function()
+  {
+    item.css("background-color", fromColor);
+  }, duration);
+}
+
+function revealMonthDay(correct)
 {
   $("#info-day-val").html(answerInfo["datetime"].toFormat("MM/dd"));
   $("#info-day-val").removeClass("info-value-hidden");
   $("#info-day-val").addClass("info-value");
+
+  var bgColor = (correct ? "#67f06e" : "#f06767");
+  flashBackground($("#info-day"), infoBg, bgColor, 500);
 }
 
-function revealYear()
+function revealYear(correct)
 {
   $("#info-year-val").html(answerInfo["datetime"].toFormat("yyyy"));
   $("#info-year-val").removeClass("info-value-hidden");
   $("#info-year-val").addClass("info-value");
+
+  var bgColor = (correct ? "#67f06e" : "#f06767");
+  flashBackground($("#info-year"), infoBg, bgColor, 500);
 }
 
-function revealPercent()
+function revealPercent(correct)
 {
   var percent = (answerInfo["killcount"] / answerInfo["droprate"]) * 100;
   $("#info-percent-val").html("" + percent.toFixed(1).toLocaleString("en-US") + "%");
   $("#info-percent-val").removeClass("info-value-hidden");
   $("#info-percent-val").addClass("info-value");
+
+  var bgColor = (correct ? "#67f06e" : "#f06767");
+  flashBackground($("#info-percent"), infoBg, bgColor, 500);
 }
 
-function revealRegion()
+function revealRegion(correct)
 {
   $("#info-region-val").html(answerInfo["region"]);
   $("#info-region-val").removeClass("info-value-hidden");
   $("#info-region-val").addClass("info-value");
+
+  var bgColor = (correct ? "#67f06e" : "#f06767");
+  flashBackground($("#info-region"), infoBg, bgColor, 500);
 }
 
-function revealKillcount()
+function revealKillcount(correct)
 {
   $("#info-killcount-val").html(answerInfo["killcount"].toLocaleString("en-US"));
   $("#info-killcount-val").removeClass("info-value-hidden");
   $("#info-killcount-val").addClass("info-value");
+
+  var bgColor = (correct ? "#67f06e" : "#f06767");
+  flashBackground($("#info-killcount"), infoBg, bgColor, 500);
 }
 
-function revealType()
+function revealType(correct)
 {
   $("#info-type-val").html(answerInfo["type"]);
   $("#info-type-val").removeClass("info-value-hidden");
   $("#info-type-val").addClass("info-value");
+
+  var bgColor = (correct ? "#67f06e" : "#f06767");
+  flashBackground($("#info-type"), infoBg, bgColor, 500);
+}
+
+function revealSilhouette()
+{
+  $("#info-image").removeClass("info-image-hidden");
+  $("#info-image").addClass("info-image");
+
+  $("#pet-image").attr("src", answerInfo["silhouette"]);
+}
+
+function revealImage()
+{
+  $("#info-image").removeClass("info-image-hidden");
+  $("#info-image").addClass("info-image");
+
+  $("#pet-image").attr("src", answerInfo["image"]);
 }
 
 function closeAllLists()
@@ -278,23 +323,24 @@ function submitGuess()
   {
     if (guesses.length == 1)
     {
-      revealYear();
+      revealYear(false);
     }
     else if (guesses.length == 2)
     {
-      revealPercent();
+      revealPercent(false);
     }
     else if (guesses.length == 3)
     {
-      revealRegion();
+      revealRegion(false);
     }
     else if (guesses.length == 4)
     {
-      revealKillcount();
+      revealKillcount(false);
+      revealType(false);
     }
     else if (guesses.length == 5)
     {
-      revealType();
+      revealSilhouette();
     }
     else {
       $("#myInput").prop("disabled", true);
@@ -307,6 +353,8 @@ function submitGuess()
 
       $("#message").html("<h2>You lose! The pet of the day is the " + answerInfo["name"] + "!</h2>");
       $("#message").append("<button onclick='javascript:share()' id='share-button'>Share</button>");
+
+      revealImage();
     }
   }
   else
@@ -322,11 +370,12 @@ function submitGuess()
     $("#message").html("<h2>Correct! The pet of the day is the " + answerInfo["name"] + "!</h2>");
     $("#message").append("<button onclick='javascript:share()' id='share-button'>Share</button>");
 
-    revealYear();
-    revealPercent();
-    revealRegion();
-    revealKillcount();
-    revealType();
+    revealYear(true);
+    revealPercent(true);
+    revealRegion(true);
+    revealKillcount(true);
+    revealType(true);
+    revealImage();
   }
 }
 
@@ -365,14 +414,16 @@ $(window).on('load', function() {
     {
       answerInfo["name"] = val[0];
       answerInfo["datetime"] = DateTime.fromFormat(val[1], "yyyy-MM-dd'T'HH:mm:ss'Z'");
-      answerInfo["killcount"] = parseInt(val[2]);
-      answerInfo["droprate"] = parseInt(val[3]);
+      answerInfo["killcount"] = val[2];
+      answerInfo["droprate"] = val[3];
       answerInfo["region"] = val[4];
       answerInfo["type"] = val[5];
+      answerInfo["image"] = val[6];
+      answerInfo["silhouette"] = val[7];
     }
   });
   
-  revealMonthDay();
+  revealMonthDay(true);
 
   $(document).on("click", function(e) {
     if (!$(e.target).is("#myInput"))
@@ -381,7 +432,7 @@ $(window).on('load', function() {
     }
   });
 
-  $("#myInput").on("input click", function(e)
+  $("#myInput").on("input click focus", function(e)
   {
     e.preventDefault();
     $("#input-submit").prop('disabled', !validGuess());
@@ -453,6 +504,12 @@ $(window).on('load', function() {
       if (currentFocus > -1 && currentFocus < items.length)
       {
         items[currentFocus].click();
+        currentFocus = -1;
+      }
+      else if (currentFocus == -1)
+      {
+        $("#input-submit").click();
+        $("#myInput").blur();
       }
     }
   });
