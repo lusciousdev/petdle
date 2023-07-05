@@ -161,7 +161,7 @@ if (!String.prototype.format) {
   };
 }
 
-var infoBg = "#f7f7f7";
+var infoBg = "var(--bg-light)";
 
 function flashBackground(item, fromColor, toColor, duration)
 {
@@ -178,7 +178,7 @@ function revealMonthDay(correct)
   $("#info-day-val").removeClass("info-value-hidden");
   $("#info-day-val").addClass("info-value");
 
-  var bgColor = (correct ? "#67f06e" : "#f06767");
+  var bgColor = (correct ? "var(--correct-color)" : "var(--incorrect-color)");
   flashBackground($("#info-day"), infoBg, bgColor, 500);
 }
 
@@ -188,7 +188,7 @@ function revealYear(correct)
   $("#info-year-val").removeClass("info-value-hidden");
   $("#info-year-val").addClass("info-value");
 
-  var bgColor = (correct ? "#67f06e" : "#f06767");
+  var bgColor = (correct ? "var(--correct-color)" : "var(--incorrect-color)");
   flashBackground($("#info-year"), infoBg, bgColor, 500);
 }
 
@@ -204,7 +204,7 @@ function revealPercent(correct)
   $("#info-percent-val").removeClass("info-value-hidden");
   $("#info-percent-val").addClass("info-value");
 
-  var bgColor = (correct ? "#67f06e" : "#f06767");
+  var bgColor = (correct ? "var(--correct-color)" : "var(--incorrect-color)");
   flashBackground($("#info-percent"), infoBg, bgColor, 500);
 }
 
@@ -214,7 +214,7 @@ function revealRegion(correct)
   $("#info-region-val").removeClass("info-value-hidden");
   $("#info-region-val").addClass("info-value");
 
-  var bgColor = (correct ? "#67f06e" : "#f06767");
+  var bgColor = (correct ? "var(--correct-color)" : "var(--incorrect-color)");
   flashBackground($("#info-region"), infoBg, bgColor, 500);
 }
 
@@ -229,7 +229,7 @@ function revealKillcount(correct)
   $("#info-killcount-val").removeClass("info-value-hidden");
   $("#info-killcount-val").addClass("info-value");
 
-  var bgColor = (correct ? "#67f06e" : "#f06767");
+  var bgColor = (correct ? "var(--correct-color)" : "var(--incorrect-color)");
   flashBackground($("#info-killcount"), infoBg, bgColor, 500);
 }
 
@@ -239,7 +239,7 @@ function revealType(correct)
   $("#info-type-val").removeClass("info-value-hidden");
   $("#info-type-val").addClass("info-value");
 
-  var bgColor = (correct ? "#67f06e" : "#f06767");
+  var bgColor = (correct ? "var(--correct-color)" : "var(--incorrect-color)");
   flashBackground($("#info-type"), infoBg, bgColor, 500);
 }
 
@@ -382,8 +382,8 @@ function submitGuess()
 
       $("#myInput").val(answerInfo["name"]);
 
-      $("#myInput").css('background-color', '#7a0f07');
-      $("#myInput").css('color', 'white');
+      $("#myInput").css('background-color', 'var(--incorrect-color)');
+      $("#myInput").css('color', 'var(--default-color)');
 
       $("#message").html("<h2>You lose! The pet of the day is the " + answerInfo["name"] + "!</h2>");
       $("#message").append("<button onclick='javascript:share()' id='share-button'>Share</button>");
@@ -398,8 +398,8 @@ function submitGuess()
 
     $("#myInput").val(answerInfo["name"]);
 
-    $("#myInput").css('background-color', '#538d4e');
-    $("#myInput").css('color', 'white');
+    $("#myInput").css('background-color', 'var(--correct-color)');
+    $("#myInput").css('color', 'var(--default-color)');
 
     $("#message").html("<h2>Correct! The pet of the day is the " + answerInfo["name"] + "!</h2>");
     $("#message").append("<button onclick='javascript:share()' id='share-button'>Share</button>");
