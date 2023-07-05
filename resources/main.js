@@ -100,7 +100,8 @@ var pets = [["Abyssal orphan",        "2020-06-22T22:06:00Z", [      5653], [   
             ["Lil' creator",          "2021-12-23T20:50:00Z", [      5928], [     12000],        "Western Sea", "Minigame", "./resources/images/Lil'_Creator.png",         "./resources/images/silhouettes/26.png"],
             ["Sanguine dust",         "2022-05-20T02:40:13Z", [        92], [       275],          "Morytania",      "PvM", "./resources/images/Sanguine_dust.png",        "./resources/images/silhouettes/54.png"],
             ["Metamorphic dust",      "2023-06-27T20:19:00Z", [       646], [       400],      "Great Kourend",      "PvM", "./resources/images/Metamorphic_dust.png",     "./resources/images/silhouettes/55.png"],
-            ["Abyssal protector",     "2023-06-29T00:14:00Z", [      1340], [      4000],        "Eastern Sea", "Minigame", "./resources/images/Abyssal_protector.png",    "./resources/images/silhouettes/2.png"]];
+            ["Abyssal protector",     "2023-06-29T00:14:00Z", [      1340], [      4000],        "Eastern Sea", "Minigame", "./resources/images/Abyssal_protector.png",    "./resources/images/silhouettes/2.png"],
+            ["Skotos",                "2023-07-04T20:47:00Z", [       135], [        65],      "Great Kourend",      "PvM", "./resources/images/Skotos.png",               "./resources/images/silhouettes/25.png"]];
 
 var answers = ["Pet smoke devil",
                "Callisto cub",
@@ -134,6 +135,7 @@ var answers = ["Pet smoke devil",
                "Abyssal orphan",
                "Vorki",
                "Kalphite princess",
+               "Skotos",
                "Pet k'ril tsutsaroth",
                "Beaver",
                "Herbi",
