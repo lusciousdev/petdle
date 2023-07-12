@@ -2,7 +2,9 @@ var DateTime = luxon.DateTime;
 
 var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 28, month: 6, year: 2023 }, { zone: "America/Los_Angeles"});
 var todaysDate = DateTime.now().setZone("America/Los_Angeles");
-var answerDay = Math.floor(todaysDate.diff(startDate, 'days').values["days"]);
+var daysSinceStart = Math.floor(todaysDate.diff(startDate, 'days').values["days"]);
+
+var answerDay = 0;
 
 var valid = [["Abyssal orphan",        "https://oldschool.runescape.wiki/images/Abyssal_orphan.png?5bab3",               []],
              ["Baby mole",             "https://oldschool.runescape.wiki/images/Baby_mole.png?81388",                    []],
@@ -431,6 +433,26 @@ function setAutocompleteFocus()
 }
 
 $(window).on('load', function() {
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+
+  var paramDay = urlParams.get("day");
+
+  if (paramDay && !isNaN(parseInt(paramDay)))
+  {
+    answerDay = parseInt(paramDay) - 1;
+  }
+  else
+  {
+    answerDay = daysSinceStart;
+  }
+
+  $("#prev-puzzles").empty();
+  for(var i = 0; i < daysSinceStart; i++)
+  {
+    $("#prev-puzzles").append("<div class='puzzle-link'><a href='{0}'>#{1} - {2}</a></div>".format("?day={0}".format(i + 1), (i + 1).toString().padStart(2, "0"), startDate.plus({ days: i }).toISODate()));
+  }
+
   if (answerDay < answers.length)
   {
     correctAnswer = answers[answerDay];

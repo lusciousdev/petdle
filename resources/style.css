@@ -212,3 +212,17 @@ input[type=submit]:disabled {
   border-color: var(--default-color);
   font-size: 18px;
 }
+
+#prev-puzzles-container {
+  width: 100%;
+  text-align: center;
+}
+
+#prev-puzzles a {
+  color: var(--accent-color);
+  font-family: monospace;
+}
+
+#prev-puzzles a:hover {
+  color: var(--accent-color);
+}
