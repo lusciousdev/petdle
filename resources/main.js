@@ -6,144 +6,6 @@ var daysSinceStart = Math.floor(todaysDate.diff(startDate, 'days').values["days"
 
 var answerDay = 0;
 
-var valid = [["Abyssal orphan",        "https://oldschool.runescape.wiki/images/Abyssal_orphan.png?5bab3",               []],
-             ["Baby mole",             "https://oldschool.runescape.wiki/images/Baby_mole.png?81388",                    []],
-             ["Callisto cub",          "https://oldschool.runescape.wiki/images/Callisto_cub.png?d6057",                 []],
-             ["Hellpuppy",             "https://oldschool.runescape.wiki/images/Hellpuppy.png?80b36",                    []],
-             ["Ikkle hydra",           "https://oldschool.runescape.wiki/images/Ikkle_hydra_%28serpentine%29.png?80b36", []],
-             ["Jal-nib-rek",           "https://oldschool.runescape.wiki/images/Jal-nib-rek.png?b3ec1",                  []],
-             ["Kalphite princess",     "https://oldschool.runescape.wiki/images/Kalphite_princess.png?d8722",            ["Kalphite Queen"]],
-             ["Muphin",                "https://oldschool.runescape.wiki/images/Muphin_%28ranged%29.png?11c7e",          ["Lil' Grumble", "The Grumbler"]],
-             ["Lil' zik",              "https://oldschool.runescape.wiki/images/Lil%27_zik.png?c62f1",                   []],
-             ["Little nightmare",      "https://oldschool.runescape.wiki/images/Little_nightmare.png?f3f6a",             []],
-             ["Nexling",               "https://oldschool.runescape.wiki/images/Nexling.png?23e0d",                      []],
-             ["Noon",                  "https://oldschool.runescape.wiki/images/Noon.png?4068d",                         ["Midnight"]],
-             ["Olmlet",                "https://oldschool.runescape.wiki/images/Olmlet.png?d8722",                       []],
-             ["Pet chaos elemental",   "https://oldschool.runescape.wiki/images/Pet_chaos_elemental.png?e2d9b",          []],
-             ["Pet dagannoth prime",   "https://oldschool.runescape.wiki/images/Pet_dagannoth_prime.png?e2d9b",          []],
-             ["Pet dagannoth rex",     "https://oldschool.runescape.wiki/images/Pet_dagannoth_rex.png?e2d9b",            []],
-             ["Pet dagannoth supreme", "https://oldschool.runescape.wiki/images/Pet_dagannoth_supreme.png?e2d9b",        []],
-             ["Pet dark core",         "https://oldschool.runescape.wiki/images/Pet_dark_core.png?85699",                []],
-             ["Pet general graardor",  "https://oldschool.runescape.wiki/images/Pet_general_graardor.png?85699",         []],
-             ["Pet k'ril tsutsaroth",  "https://oldschool.runescape.wiki/images/Pet_k%27ril_tsutsaroth.png?fe846",       ["Pet kril tsutsaroth"]],
-             ["Pet kraken",            "https://oldschool.runescape.wiki/images/Pet_kraken.png?85699",                   []],
-             ["Pet kree'arra",         "https://oldschool.runescape.wiki/images/Pet_kree%27arra.png?f3f6a",              ["Pet kreearra"]],
-             ["Pet smoke devil",       "https://oldschool.runescape.wiki/images/Pet_smoke_devil.png?fe846",              ["Thermy", "Thermonuclear smoke devil"]],
-             ["Pet snakeling",         "https://oldschool.runescape.wiki/images/Pet_snakeling.png?c0946",                ["Zulrah"]],
-             ["Pet zilyana",           "https://oldschool.runescape.wiki/images/Pet_zilyana.png?f3f6a",                  []],
-             ["Phoenix",               "https://oldschool.runescape.wiki/images/Phoenix.png?fe846",                      []],
-             ["Prince black dragon",   "https://oldschool.runescape.wiki/images/Prince_black_dragon.png?c0946",          ["King black dragon"]],
-             ["Scorpia's offspring",   "https://oldschool.runescape.wiki/images/Scorpia%27s_offspring.png?85699",        []],
-             ["Skotos",                "https://oldschool.runescape.wiki/images/Skotos.png?52875",                       ["Skotizo"]],
-             ["Smolcano",              "https://oldschool.runescape.wiki/images/Smolcano.png?52875",                     ["Zalcano"]],
-             ["Sraracha",              "https://oldschool.runescape.wiki/images/Sraracha.png?52875",                     ["Sarachnis"]],
-             ["Tiny tempor",           "https://oldschool.runescape.wiki/images/Tiny_tempor.png?77385",                  []],
-             ["Tumeken's guardian",    "https://oldschool.runescape.wiki/images/Tumeken%27s_guardian.png?5790e",         ["ToA"]],
-             ["Tzrek-jad",             "https://oldschool.runescape.wiki/images/Tzrek-jad.png?420f4",                    []],
-             ["Venenatis spiderling",  "https://oldschool.runescape.wiki/images/Venenatis_spiderling.png?26d89",         []],
-             ["Vet'ion jr.",           "https://oldschool.runescape.wiki/images/Vet%27ion_jr..png?26d89",                ["Vetion jr."]],
-             ["Vorki",                 "https://oldschool.runescape.wiki/images/Vorki.png?03aa0",                        ["Vorkath"]],
-             ["Youngllef",             "https://oldschool.runescape.wiki/images/Youngllef.png?1e205",                    ["Hunllef", "Hunleff", "Youngleff"]],
-             ["Baby chinchompa",       "https://oldschool.runescape.wiki/images/Baby_chinchompa_%28red%29.png?b5841",    []],
-             ["Beaver",                "https://oldschool.runescape.wiki/images/Beaver.png?0d4ed",                       []],
-             ["Giant squirrel",        "https://oldschool.runescape.wiki/images/Giant_squirrel.png?3b568",               []],
-             ["Heron",                 "https://oldschool.runescape.wiki/images/Heron.png?80b36",                        []],
-             ["Rift guardian",         "https://oldschool.runescape.wiki/images/Rift_guardian_%28fire%29.png?c0946",     []],
-             ["Rock golem",            "https://oldschool.runescape.wiki/images/Rock_golem.png?77385",                   []],
-             ["Rocky",                 "https://oldschool.runescape.wiki/images/Rocky.png?3f71e",                        []],
-             ["Tangleroot",            "https://oldschool.runescape.wiki/images/Tangleroot.png?52875",                   []],
-             ["Abyssal protector",     "https://oldschool.runescape.wiki/images/Abyssal_protector.png?1e68e",            ["GotR"]],
-             ["Bloodhound",            "https://oldschool.runescape.wiki/images/Bloodhound.png?0d4ed",                   []],
-             ["Cat",                   "https://oldschool.runescape.wiki/images/Pet_cat_%28black%29.png?e2d9b",          []],
-             ["Chompy chick",          "https://oldschool.runescape.wiki/images/Chompy_chick.png?36657",                 []],
-             ["Hellcat",               "https://oldschool.runescape.wiki/images/Hell_cat.png?80b36",                     []],
-             ["Herbi",                 "https://oldschool.runescape.wiki/images/Herbi.png?d8722",                        []],
-             ["Lil' creator",          "https://oldschool.runescape.wiki/images/Lil%27_creator.png?60046",               ["Soul wars"]],
-             ["Pet fish",              "https://oldschool.runescape.wiki/images/Fishbowl_%28blue%29.png?5abba",          []],
-             ["Pet penance queen",     "https://oldschool.runescape.wiki/images/Pet_penance_queen.png?c0946",            []],
-             ["Pet rock",              "https://oldschool.runescape.wiki/images/Pet_rock.png?97482",                     []],
-             ["Toy cat",               "https://oldschool.runescape.wiki/images/Toy_cat.png?d1c2e",                      []],
-             ["Metamorphic dust",      "https://oldschool.runescape.wiki/images/Metamorphic_dust.png?ccf02",             []],
-             ["Sanguine dust",         "https://oldschool.runescape.wiki/images/Sanguine_dust.png?7313d",                []]];
-
-var pets = [["Abyssal orphan",        "2020-06-22T22:06:00Z", [      5653], [      2560],      "Abyssal Space",      "PvM", "./resources/images/Abyssal_orphan.png",       "./resources/images/silhouettes/1.png"],
-            ["Baby mole",             "2019-10-23T02:27:00Z", [      4871], [      3000],           "Asgarnia",      "PvM", "./resources/images/Baby_Mole.png",            "./resources/images/silhouettes/4.png"],
-            ["Callisto cub",          "2019-03-11T14:47:00Z", [      2368], [      2000],         "Wilderness",      "PvM", "./resources/images/Callisto_cub.png",         "./resources/images/silhouettes/7.png"],
-            ["Hellpuppy",             "2019-02-19T12:00:00Z", [      4261], [      3000],           "Asgarnia",      "PvM", "./resources/images/Hellpuppy.png",            "./resources/images/silhouettes/17.png"],
-            ["Ikkle hydra",           "2019-01-13T22:26:00Z", [       181], [      3000],      "Great Kourend",      "PvM", "./resources/images/Ikkle_Hydra.png",          "./resources/images/silhouettes/20.png"],
-            ["Kalphite princess",     "2020-09-02T23:36:00Z", [     12429], [      3000],   "Kharidian Desert",      "PvM", "./resources/images/Kalphite_Princess.png",    "./resources/images/silhouettes/22.png"],
-            ["Muphin",                "2023-01-18T23:20:00Z", [       450], [      2500],      "Troll Country",      "PvM", "./resources/images/Muphin.png",               "./resources/images/silhouettes/29.png"],
-            ["Little nightmare",      "2023-04-20T00:14:00Z", [      2066], [      1400],          "Morytania",      "PvM", "./resources/images/Little_nightmare.png",     "./resources/images/silhouettes/28.png"],
-            ["Noon",                  "2019-07-10T13:19:00Z", [      1559], [      3000],          "Morytania",      "PvM", "./resources/images/Noon.png",                 "./resources/images/silhouettes/31.png"],
-            ["Olmlet",                "2021-08-04T02:14:00Z", [   731, 86], [ 1839, 821],      "Great Kourend",      "PvM", "./resources/images/Olmlet.png",               "./resources/images/silhouettes/32.png"],
-            ["Pet chaos elemental",   "2019-12-04T17:08:00Z", [        39], [       300],         "Wilderness",      "PvM", "./resources/images/Chaos_Elemental_Jr.png",   "./resources/images/silhouettes/8.png"],
-            ["Pet dagannoth prime",   "2020-01-06T22:17:00Z", [       975], [      5000], "Fremennik Province",      "PvM", "./resources/images/Dagannoth_Prime_Jr.png",   "./resources/images/silhouettes/10.png"],
-            ["Pet dagannoth rex",     "2019-10-24T03:17:00Z", [       796], [      5000], "Fremennik Province",      "PvM", "./resources/images/Dagannoth_Rex_Jr.png",     "./resources/images/silhouettes/11.png"],
-            ["Pet dagannoth supreme", "2020-04-24T21:55:00Z", [      1596], [      5000], "Fremennik Province",      "PvM", "./resources/images/Dagannoth_Supreme_Jr.png", "./resources/images/silhouettes/12.png"],
-            ["Pet general graardor",  "2022-04-21T00:13:00Z", [      3881], [      5000],      "Troll Country",      "PvM", "./resources/images/General_Graardor_Jr.png",  "./resources/images/silhouettes/14.png"],
-            ["Pet k'ril tsutsaroth",  "2021-08-11T22:10:00Z", [       767], [      5000],      "Troll Country",      "PvM", "./resources/images/K'ril_Tsutsaroth_Jr.png",  "./resources/images/silhouettes/25.png"],
-            ["Pet kraken",            "2019-04-21T21:44:00Z", [      6922], [      3000],           "Kandarin",      "PvM", "./resources/images/Kraken.png",               "./resources/images/silhouettes/23.png"],
-            ["Pet smoke devil",       "2021-04-18T23:38:00Z", [     15380], [      3000],           "Kandarin",      "PvM", "./resources/images/Smoke_Devil.png",          "./resources/images/silhouettes/41.png"],
-            ["Pet zilyana",           "2021-05-05T22:42:00Z", [      2892], [      5000],      "Troll Country",      "PvM", "./resources/images/Zilyana_Jr.png",           "./resources/images/silhouettes/53.png"],
-            ["Phoenix",               "2019-08-17T15:58:00Z", [       952], [      1880],      "Great Kourend", "Minigame", "./resources/images/Phoenix.png",              "./resources/images/silhouettes/34.png"],
-            ["Prince black dragon",   "2019-03-20T12:00:00Z", [       798], [      3000],         "Wilderness",      "PvM", "./resources/images/Prince_Black_Dragon.png",  "./resources/images/silhouettes/35.png"],
-            ["Smolcano",              "2023-03-14T17:48:00Z", [      3252], [      2250],           "Tirannwn",      "PvM", "./resources/images/Smolcano.png",             "./resources/images/silhouettes/42.png"],
-            ["Sraracha",              "2021-03-22T23:42:00Z", [      4703], [      3000],      "Great Kourend",      "PvM", "./resources/images/Sraracha.png",             "./resources/images/silhouettes/44.png"],
-            ["Tumeken's guardian",    "2022-09-01T01:55:00Z", [        88], [      1360],   "Kharidian Desert",      "PvM", "./resources/images/Tumeken's_Guardian.png",   "./resources/images/silhouettes/47.png"],
-            ["Tzrek-jad",             "2018-04-23T21:05:00Z", [        16], [        67],            "Karamja",      "PvM", "./resources/images/TzRek-Jad.png",            "./resources/images/silhouettes/48.png"],
-            ["Vet'ion jr.",           "2023-05-10T00:59:00Z", [1348, 1422], [2000, 2800],         "Wilderness",      "PvM", "./resources/images/Vet'ion_Jr.png",           "./resources/images/silhouettes/50.png"],
-            ["Vorki",                 "2019-03-28T16:35:00Z", [      1287], [      3000], "Fremennik Province",      "PvM", "./resources/images/Vorki.png",                "./resources/images/silhouettes/51.png"],
-            ["Youngllef",             "2021-07-24T19:20:00Z", [      1317], [       800],           "Tirannwn",      "PvM", "./resources/images/Youngllef.png",            "./resources/images/silhouettes/52.png"],
-            ["Beaver",                "2018-04-28T13:17:00Z", [   7090372], [  22260000],                "N/A", "Skilling", "./resources/images/Beaver.png",               "./resources/images/silhouettes/5.png"],
-            ["Heron",                 "2018-08-17T14:48:00Z", [  14700000], [  28270000],                "N/A", "Skilling", "./resources/images/Heron.png",                "./resources/images/silhouettes/19.png"],
-            ["Rock golem",            "2019-05-21T16:15:00Z", [  13900000], [  20000000],                "N/A", "Skilling", "./resources/images/Rock_golem.png",           "./resources/images/silhouettes/37.png"],
-            ["Bloodhound",            "2019-09-16T22:55:00Z", [       275], [      1000],                "N/A",    "Other", "./resources/images/Bloodhound.png",           "./resources/images/silhouettes/6.png"],
-            ["Herbi",                 "2023-02-11T17:01:00Z", [     14323], [      6500],      "Fossil Island", "Skilling", "./resources/images/Herbi.png",                "./resources/images/silhouettes/18.png"],
-            ["Lil' creator",          "2021-12-23T20:50:00Z", [      5928], [     12000],        "Western Sea", "Minigame", "./resources/images/Lil'_Creator.png",         "./resources/images/silhouettes/26.png"],
-            ["Sanguine dust",         "2022-05-20T02:40:13Z", [        92], [       275],          "Morytania",      "PvM", "./resources/images/Sanguine_dust.png",        "./resources/images/silhouettes/54.png"],
-            ["Metamorphic dust",      "2023-06-27T20:19:00Z", [       646], [       400],      "Great Kourend",      "PvM", "./resources/images/Metamorphic_dust.png",     "./resources/images/silhouettes/55.png"],
-            ["Abyssal protector",     "2023-06-29T00:14:00Z", [      1340], [      4000],        "Eastern Sea", "Minigame", "./resources/images/Abyssal_protector.png",    "./resources/images/silhouettes/2.png"],
-            ["Skotos",                "2023-07-04T20:47:00Z", [       135], [        65],      "Great Kourend",      "PvM", "./resources/images/Skotos.png",               "./resources/images/silhouettes/25.png"]];
-
-var answers = ["Pet smoke devil",
-               "Callisto cub",
-               "Youngllef",
-               "Lil' creator",
-               "Pet dagannoth supreme",
-               "Vet'ion jr.",
-               "Abyssal protector",
-               "Hellpuppy",
-               "Pet dagannoth rex",
-               "Tumeken's guardian",
-               "Pet zilyana",
-               "Bloodhound",
-               "Tzrek-jad",
-               "Ikkle hydra",
-               "Baby mole",
-               "Noon",
-               "Metamorphic dust",
-               "Pet general graardor",
-               "Rock golem",
-               "Little nightmare",
-               "Prince black dragon",
-               "Sraracha",
-               "Sanguine dust",
-               "Olmlet",
-               "Heron",
-               "Pet kraken",
-               "Pet dagannoth prime",
-               "Muphin",
-               "Abyssal orphan",
-               "Vorki",
-               "Kalphite princess",
-               "Skotos",
-               "Pet chaos elemental",
-               "Pet k'ril tsutsaroth",
-               "Beaver",
-               "Herbi",
-               "Phoenix",
-               "Smolcano"]
-
 var correctAnswer;
 var answerInfo = {};
 var guesses = [];
@@ -164,6 +26,85 @@ if (!String.prototype.format) {
 }
 
 var infoBg = "var(--bg-light)";
+
+function testPet(key)
+{
+  var petInfo = info.allPetList[key];
+  var petDropInfo = null;
+  info.petDropList.forEach(function(val) {
+    if (val[0] == key)
+    {
+      petDropInfo = {};
+      petDropInfo["key"] = key;
+      petDropInfo["datetime"] = DateTime.fromFormat(val[1], "yyyy-MM-dd'T'HH:mm:ss'Z'");
+      petDropInfo["killcount"] = val[2];
+      petDropInfo["droprate"] = val[3];
+      petDropInfo["name"] = info.allPetList[key]["name"];
+      petDropInfo["region"] = info.allPetList[key]["region"];
+      petDropInfo["type"] = info.allPetList[key]["type"];
+      petDropInfo["image"] = info.allPetList[key]["following_image_url"];
+      petDropInfo["silhouette"] = info.allPetList[key]["sillhouette_url"];
+    };
+  });
+
+  $("#info-day-val").removeClass("info-value-hidden");
+  $("#info-day-val").addClass("info-value");
+  $("#info-year-val").removeClass("info-value-hidden");
+  $("#info-year-val").addClass("info-value");
+  $("#info-percent-val").removeClass("info-value-hidden");
+  $("#info-percent-val").addClass("info-value");
+  $("#info-killcount-val").removeClass("info-value-hidden");
+  $("#info-killcount-val").addClass("info-value");
+  
+  if (petDropInfo)
+  {
+    $("#info-day-val").html(petDropInfo["datetime"].toFormat("MM/dd"));
+    
+    $("#info-year-val").html(petDropInfo["datetime"].toFormat("yyyy"));
+  
+    var percent = 0;
+    petDropInfo["killcount"].forEach(function(val, index)
+    {
+      percent += val / (1.0 * petDropInfo["droprate"][index]);
+    });
+    percent *= 100;
+    $("#info-percent-val").html("{0}%".format(percent.toFixed(1).toLocaleString("en-US")));
+    
+    var killCounts = []
+    petDropInfo["killcount"].forEach(function(val)
+    {
+      killCounts.push(val.toLocaleString("en-US"));
+    });
+    $("#info-killcount-val").html(killCounts.join(" & "));
+  }
+  else
+  {
+    $("#info-day-val").html("No info.");
+    $("#info-year-val").html("No info.");
+    $("#info-percent-val").html("No info.");
+    $("#info-killcount-val").html("No info.");
+  }
+  
+  $("#info-region-val").html(petInfo["region"]);
+  $("#info-region-val").removeClass("info-value-hidden");
+  $("#info-region-val").addClass("info-value");
+  
+  $("#info-type-val").html(petInfo["type"]);
+  $("#info-type-val").removeClass("info-value-hidden");
+  $("#info-type-val").addClass("info-value");
+  
+  $("#info-image").removeClass("info-image-hidden");
+  $("#info-image").addClass("info-image");
+
+  $("#pet-image").attr("src", petInfo["silhouette_url"]);
+  $("#test-pet-image").attr("src", petInfo["following_image_url"]);
+
+  $("#pet-image").css("width", "125px");
+  $("#pet-image").css("height", "125px")
+
+  $("#test-pet-image").css("width", "125px");
+  $("#test-pet-image").css("height", "125px")
+}
 
 function flashBackground(item, fromColor, toColor, duration)
 {
@@ -268,14 +209,14 @@ function closeAllLists()
 
 function checkMatch(input, pet)
 {
-  if (pet[0].toLowerCase().includes(input.toLowerCase().trim()))
+  if (pet["name"].toLowerCase().includes(input.toLowerCase().trim()))
   {
     return true;
   }
   else
   {
     var matchFound = false;
-    pet[2].forEach(function(altName)
+    pet["alt_names"].forEach(function(altName)
     {
       if (altName.toLowerCase().includes(input.toLowerCase().trim()))
       {
@@ -334,7 +275,16 @@ function validGuess()
   var guess = $("#myInput").val();
 
   var validGuess = false;
-  valid.forEach(function(val) { if (val[0].toLowerCase() == guess.toLowerCase()) validGuess = true; } );
+  for (const key in info.allPetList)
+  {
+    var petObject = info.allPetList[key];
+    
+    if (petObject["name"].toLowerCase() == guess.toLowerCase())
+    {
+      validGuess = true;
+      break;
+    }
+  }
 
   return validGuess;
 }
@@ -453,29 +403,31 @@ $(window).on('load', function() {
     $("#prev-puzzles").append("<div class='puzzle-link'><a href='{0}'>#{1} - {2}</a></div>".format("?day={0}".format(i + 1), (i + 1).toString().padStart(2, "0"), startDate.plus({ days: i }).toISODate()));
   }
 
-  if (answerDay < answers.length)
+  if (answerDay < info.answerKey.length)
   {
-    correctAnswer = answers[answerDay];
+    correctAnswer = info.answerKey[answerDay];
   }
   else
   {
-    correctAnswer = answers[answers.length - 1];
+    correctAnswer = info.answerKey[info.answerKey.length - 1];
   }
 
   $("#input-submit").prop('disabled', !validGuess());
 
-  pets.forEach(function(val, index)
+  info.petDropList.forEach(function(val, index)
   {
     if (val[0] == correctAnswer)
     {
-      answerInfo["name"] = val[0];
+      var key = val[0];
+      answerInfo["key"] = key;
       answerInfo["datetime"] = DateTime.fromFormat(val[1], "yyyy-MM-dd'T'HH:mm:ss'Z'");
       answerInfo["killcount"] = val[2];
       answerInfo["droprate"] = val[3];
-      answerInfo["region"] = val[4];
-      answerInfo["type"] = val[5];
-      answerInfo["image"] = val[6];
-      answerInfo["silhouette"] = val[7];
+      answerInfo["name"] = info.allPetList[key]["name"];
+      answerInfo["region"] = info.allPetList[key]["region"];
+      answerInfo["type"] = info.allPetList[key]["type"];
+      answerInfo["image"] = info.allPetList[key]["following_image_url"];
+      answerInfo["silhouette"] = info.allPetList[key]["sillhouette_url"];
     }
   });
 
@@ -507,18 +459,20 @@ $(window).on('load', function() {
     currentFocus = -1;
     $("<div>", {id: 'autocomplete-list', class: 'autocomplete-items'}).appendTo("#myAutocomplete");
 
-    valid.forEach(function(pet, index)
+    for (const key in info.allPetList)
     {
-      if (checkMatch(val, pet))
+      petObject = info.allPetList[key];
+
+      if (checkMatch(val, petObject))
       {
-        var itemIdRaw = "autocomplete-item-" + index;
+        var itemIdRaw = "autocomplete-item-" + key;
         $("<div>", { id: itemIdRaw, class: "autocomplete-item"}).appendTo("#autocomplete-list");
 
         var itemId = "#" + itemIdRaw;
 
-        $(itemId).append("<img src='" + pet[1] + "' alt='" + pet[0] + "' width='24' height='24' style='margin-right:5px;'>");
-        $(itemId).append(pet[0]);
-        $(itemId).append("<input type='hidden' id='" + itemIdRaw + "-input' value=\"" + pet[0] + "\">");
+        $(itemId).append("<img src='" + petObject["inventory_image_url"] + "' alt='" + petObject["name"] + "' width='24' height='24' style='margin-right:5px;'>");
+        $(itemId).append(petObject["name"]);
+        $(itemId).append("<input type='hidden' id='" + itemIdRaw + "-input' value=\"" + petObject["name"] + "\">");
 
         $(itemId).on("click", function(e)
         {
@@ -527,7 +481,7 @@ $(window).on('load', function() {
           $("#input-submit").prop('disabled', !validGuess());
         });
       }
-    });
+    }
   });
 
   $("#myInput").on("keydown", function(e)
