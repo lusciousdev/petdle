@@ -43,7 +43,7 @@ function testPet(key)
       petDropInfo["region"] = info.allPetList[key]["region"];
       petDropInfo["type"] = info.allPetList[key]["type"];
       petDropInfo["image"] = info.allPetList[key]["following_image_url"];
-      petDropInfo["silhouette"] = info.allPetList[key]["sillhouette_url"];
+      petDropInfo["silhouette"] = info.allPetList[key]["silhouette_url"];
     };
   });
 
@@ -427,7 +427,7 @@ $(window).on('load', function() {
       answerInfo["region"] = info.allPetList[key]["region"];
       answerInfo["type"] = info.allPetList[key]["type"];
       answerInfo["image"] = info.allPetList[key]["following_image_url"];
-      answerInfo["silhouette"] = info.allPetList[key]["sillhouette_url"];
+      answerInfo["silhouette"] = info.allPetList[key]["silhouette_url"];
     }
   });
 
