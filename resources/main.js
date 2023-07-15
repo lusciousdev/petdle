@@ -1,6 +1,6 @@
 var DateTime = luxon.DateTime;
 
-var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 12, month: 7, year: 2023 }, { zone: "America/Los_Angeles"});
+var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 17, month: 6, year: 2023 }, { zone: "America/Los_Angeles"});
 var todaysDate = DateTime.now().setZone("America/Los_Angeles");
 var daysSinceStart = Math.floor(todaysDate.diff(startDate, 'days').values["days"]);
 
@@ -137,13 +137,21 @@ function revealYear(correct)
 
 function revealPercent(correct)
 {
-  var percent = 0;
-  answerInfo["killcount"].forEach(function(val, index)
+  if (answerInfo["killcount"][0] == -1 || answerInfo["droprate"] == -1)
   {
-    percent += val / (1.0 * answerInfo["droprate"][index]);
-  });
-  percent *= 100;
-  $("#info-percent-val").html("{0}%".format(percent.toFixed(1).toLocaleString("en-US")));
+    $("#info-percent-val").html("Unknown");
+  }
+  else
+  {
+    var percent = 0;
+    answerInfo["killcount"].forEach(function(val, index)
+    {
+      percent += val / (1.0 * answerInfo["droprate"][index]);
+    });
+    percent *= 100;
+    $("#info-percent-val").html("{0}%".format(percent.toFixed(1).toLocaleString("en-US")));
+  }
+
   $("#info-percent-val").removeClass("info-value-hidden");
   $("#info-percent-val").addClass("info-value");
 
@@ -163,12 +171,19 @@ function revealRegion(correct)
 
 function revealKillcount(correct)
 {
-  var killCounts = []
-  answerInfo["killcount"].forEach(function(val)
+  if (answerInfo["killcount"][0] == -1)
   {
-    killCounts.push(val.toLocaleString("en-US"));
-  });
-  $("#info-killcount-val").html(killCounts.join(" & "));
+    $("#info-killcount-val").html("Unknown");
+  }
+  else
+  {
+    var killCounts = []
+    answerInfo["killcount"].forEach(function(val)
+    {
+      killCounts.push(val.toLocaleString("en-US"));
+    });
+    $("#info-killcount-val").html(killCounts.join(" & "));
+  }
   $("#info-killcount-val").removeClass("info-value-hidden");
   $("#info-killcount-val").addClass("info-value");
 
