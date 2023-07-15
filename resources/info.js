@@ -585,8 +585,8 @@ var info = (function (exports) {
                      ["herbi", "2017-12-22T12:00:00Z", [492], [6500]],
                      ["lil_creator", "2021-01-07T12:00:00Z", [69], [400]],
                      ["pet_penance_queen", "2021-10-18T12:00:00Z", [917], [1000]],
-                     ["metamorphic_dust", "1971-01-01T12:00:00Z", [-1], [400]],
-                     ["sanguine_dust", "1971-01-01T12:00:00Z", [-1], [275]]];
+                     ["metamorphic_dust", "2019-03-15T12:00:00Z", [114], [400]],
+                     ["sanguine_dust", "2022-05-18T12:00:00Z", [952], [275]]];
 
   var answerKey = [
     "tzrek_jad",
