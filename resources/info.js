@@ -279,7 +279,7 @@ var info = (function (exports) {
       "type": "PvM", 
       "alt_names": ["Sarachnis"]
     },
-    "tiny tempor": {
+    "tiny_tempor": {
       "name": "Tiny tempor",
       "inventory_image_url": "https://oldschool.runescape.wiki/images/Tiny_tempor.png?77385",
       "following_image_url": "./resources/images/Tiny_Tempor.png",
