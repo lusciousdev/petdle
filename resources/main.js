@@ -1,3 +1,5 @@
+const { petDropList } = info
+
 var DateTime = luxon.DateTime;
 
 var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 14, month: 7, year: 2023 }, { zone: "America/Los_Angeles"});
@@ -10,7 +12,44 @@ var correctAnswer;
 var answerInfo = {};
 var guesses = [];
 var currentFocus;
-var autocompleteItems = [];
+
+var randDebug = [];
+for (var i = 0; i < petDropList.length; i++)
+{
+  randDebug[i] = 0
+}
+
+function random_answer(day)
+{
+  var constant = Math.pow(2, 15) + 1
+  var prime = 7369
+  var maximum = 1000
+
+  var cycles = Math.floor(day / petDropList.length)
+  var dayInCycle = (day % petDropList.length) + 1
+
+  var seed = cycles
+
+  function nextNorm()
+  {
+    seed *= constant
+    seed += prime
+    seed %= maximum
+
+    return seed / maximum
+  }
+
+  var val = 0
+  for (var i = 0; i < dayInCycle; i++)
+  {
+    val = nextNorm()
+  }
+  var ret = Math.floor(val * petDropList.length)
+
+  randDebug[ret] += 1
+
+  return ret
+}
 
 // First, checks if it isn't implemented yet.
 if (!String.prototype.format) {
@@ -59,6 +98,7 @@ function testPet(key)
   if (petDropInfo)
   {
     $("#info-day-val").html(petDropInfo["datetime"].toFormat("MM/dd"));
+    
     $("#info-year-val").html(petDropInfo["datetime"].toFormat("yyyy"));
   
     var percent = 0;
@@ -132,26 +172,17 @@ function revealYear(correct)
 
   var bgColor = (correct ? "var(--correct-color)" : "var(--incorrect-color)");
   flashBackground($("#info-year"), infoBg, bgColor, 500);
-
 }
 
 function revealPercent(correct)
 {
-  if (answerInfo["killcount"][0] == -1 || answerInfo["droprate"] == -1)
+  var percent = 0;
+  answerInfo["killcount"].forEach(function(val, index)
   {
-    $("#info-percent-val").html("Unknown");
-  }
-  else
-  {
-    var percent = 0;
-    answerInfo["killcount"].forEach(function(val, index)
-    {
-      percent += val / (1.0 * answerInfo["droprate"][index]);
-    });
-    percent *= 100;
-    $("#info-percent-val").html("{0}%".format(percent.toFixed(1).toLocaleString("en-US")));
-  }
-
+    percent += val / (1.0 * answerInfo["droprate"][index]);
+  });
+  percent *= 100;
+  $("#info-percent-val").html("{0}%".format(percent.toFixed(1).toLocaleString("en-US")));
   $("#info-percent-val").removeClass("info-value-hidden");
   $("#info-percent-val").addClass("info-value");
 
@@ -171,19 +202,12 @@ function revealRegion(correct)
 
 function revealKillcount(correct)
 {
-  if (answerInfo["killcount"][0] == -1)
+  var killCounts = []
+  answerInfo["killcount"].forEach(function(val)
   {
-    $("#info-killcount-val").html("Unknown");
-  }
-  else
-  {
-    var killCounts = []
-    answerInfo["killcount"].forEach(function(val)
-    {
-      killCounts.push(val.toLocaleString("en-US"));
-    });
-    $("#info-killcount-val").html(killCounts.join(" & "));
-  }
+    killCounts.push(val.toLocaleString("en-US"));
+  });
+  $("#info-killcount-val").html(killCounts.join(" & "));
   $("#info-killcount-val").removeClass("info-value-hidden");
   $("#info-killcount-val").addClass("info-value");
 
@@ -287,7 +311,7 @@ function share()
 
 function validGuess()
 {
-  var guess = $("#myInput").val();
+  var guess = $("#guess-input").val();
 
   var validGuess = false;
   for (const key in info.allPetList)
@@ -306,7 +330,7 @@ function validGuess()
 
 function submitGuess()
 {
-  var guess = $("#myInput").val();
+  var guess = $("#guess-input").val();
 
   if (!validGuess())
   {
@@ -317,8 +341,8 @@ function submitGuess()
 
   guesses.push(guess);
 
-  $("#myInput").val("");
-  $("#input-submit").prop('disabled', !validGuess());
+  $("#guess-input").val("");
+  $("#guess-submit").prop('disabled', !validGuess());
 
   if (!correct)
   {
@@ -344,13 +368,13 @@ function submitGuess()
       revealSilhouette();
     }
     else {
-      $("#myInput").prop("disabled", true);
-      $("#input-submit").prop("disabled", true);
+      $("#guess-input").prop("disabled", true);
+      $("#guess-submit").prop("disabled", true);
 
-      $("#myInput").val(answerInfo["name"]);
+      $("#guess-input").val(answerInfo["name"]);
 
-      $("#myInput").css('background-color', 'var(--incorrect-color)');
-      $("#myInput").css('color', 'var(--default-color)');
+      $("#guess-input").css('background-color', 'var(--incorrect-color)');
+      $("#guess-input").css('color', 'var(--default-color)');
 
       $("#message").html("<h2>You lose! The pet of the day is the " + answerInfo["name"] + "!</h2>");
       $("#message").append("<button onclick='javascript:share()' id='share-button'>Share</button>");
@@ -360,13 +384,13 @@ function submitGuess()
   }
   else
   {
-    $("#myInput").prop("disabled", true);
-    $("#input-submit").prop("disabled", true);
+    $("#guess-input").prop("disabled", true);
+    $("#guess-submit").prop("disabled", true);
 
-    $("#myInput").val(answerInfo["name"]);
+    $("#guess-input").val(answerInfo["name"]);
 
-    $("#myInput").css('background-color', 'var(--correct-color)');
-    $("#myInput").css('color', 'var(--default-color)');
+    $("#guess-input").css('background-color', 'var(--correct-color)');
+    $("#guess-input").css('color', 'var(--default-color)');
 
     $("#message").html("<h2>Correct! The pet of the day is the " + answerInfo["name"] + "!</h2>");
     $("#message").append("<button onclick='javascript:share()' id='share-button'>Share</button>");
@@ -413,7 +437,7 @@ $(window).on('load', function() {
   }
 
   $("#prev-puzzles").empty();
-  for(var i = 0; i < daysSinceStart; i++)
+  for(var i = 0; i < Math.min(petDropList.length, daysSinceStart); i++)
   {
     $("#prev-puzzles").append("<div class='puzzle-link'><a href='{0}'>#{1} - {2}</a></div>".format("?day={0}".format(i + 1), (i + 1).toString().padStart(2, "0"), startDate.plus({ days: i }).toISODate()));
   }
@@ -424,10 +448,10 @@ $(window).on('load', function() {
   }
   else
   {
-    correctAnswer = info.answerKey[info.answerKey.length - 1];
+    correctAnswer = info.answerKey[random_answer(answerDay)];
   }
 
-  $("#input-submit").prop('disabled', !validGuess());
+  $("#guess-submit").prop('disabled', !validGuess());
 
   info.petDropList.forEach(function(val, index)
   {
@@ -454,16 +478,16 @@ $(window).on('load', function() {
   revealMonthDay(true);
 
   $(document).on("click", function(e) {
-    if (!$(e.target).is("#myInput"))
+    if (!$(e.target).is("#guess-input"))
     {
       closeAllLists();
     }
   });
 
-  $("#myInput").on("input click focus", function(e)
+  $("#guess-input").on("input click focus", function(e)
   {
     e.preventDefault();
-    $("#input-submit").prop('disabled', !validGuess());
+    $("#guess-submit").prop('disabled', !validGuess());
 
     var a, b, i, val = this.value;
     closeAllLists();
@@ -491,16 +515,16 @@ $(window).on('load', function() {
 
         $(itemId).on("click", function(e)
         {
-          var id = $(this).attr('id');
-          $("#myInput").val($("#{0}-input".format(id)).val());
+          var id = $(this).attr('id')
+          $("#guess-input").val($("#{0}-input".format(id)).val());
           closeAllLists();
-          $("#input-submit").prop('disabled', !validGuess());
+          $("#guess-submit").prop('disabled', !validGuess());
         });
       }
     }
   });
 
-  $("#myInput").on("keydown", function(e)
+  $("#guess-input").on("keydown", function(e)
   {
     var items = $(".autocomplete-item");
 
@@ -538,8 +562,11 @@ $(window).on('load', function() {
       }
       else if (currentFocus == -1)
       {
-        $("#input-submit").click();
-        $("#myInput").blur();
+        if (validGuess())
+        {
+          $("#guess-submit").click();
+          $("#guess-input").blur();
+        }
       }
     }
   });
