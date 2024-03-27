@@ -476,7 +476,8 @@ $(window).on('load', function() {
 
         $(itemId).on("click", function(e)
         {
-          $("#myInput").val($(itemId + "-input").val());
+          var id = $(this).attr('id')
+          $("#myInput").val($("#{0}-input".format(id)).val());
           closeAllLists();
           $("#input-submit").prop('disabled', !validGuess());
         });
