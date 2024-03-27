@@ -315,7 +315,7 @@ var info = (function (exports) {
       "type": "PvM", 
       "alt_names": []
     },
-    "vetion_jr": {
+    "vetion_jr.": {
       "name": "Vet'ion jr.",
       "inventory_image_url": "https://oldschool.runescape.wiki/images/Vet%27ion_jr..png?26d89",
       "following_image_url": "./resources/images/Vet'ion_Jr.png",
