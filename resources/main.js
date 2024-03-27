@@ -1,6 +1,6 @@
 var DateTime = luxon.DateTime;
 
-var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 6, month: 6, year: 2023 }, { zone: "America/Los_Angeles"});
+var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 28, month: 6, year: 2023 }, { zone: "America/Los_Angeles"});
 var todaysDate = DateTime.now().setZone("America/Los_Angeles");
 var answerDay = Math.floor(todaysDate.diff(startDate, 'days').values["days"]);
 
