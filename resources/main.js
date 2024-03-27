@@ -1,6 +1,6 @@
 var DateTime = luxon.DateTime;
 
-var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 20, month: 6, year: 2023 }, { zone: "America/Los_Angeles"});
+var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 28, month: 6, year: 2023 }, { zone: "America/Los_Angeles"});
 var todaysDate = DateTime.now().setZone("America/Los_Angeles");
 var answerDay = Math.floor(todaysDate.diff(startDate, 'days').values["days"]);
 
@@ -215,17 +215,17 @@ function getGuessString()
   {
     if (val.toLowerCase() == answerInfo['name'].toLowerCase())
     {
-      guessStr += "🟩";
+      guessStr += "\u{1F7E9}"; // green square
     }
     else
     {
-      guessStr += "🟥";
+      guessStr += "\u{1F7E5}"; // red square 
     }
   });
 
   for(var i = guesses.length; i < 6; ++i)
   {
-    guessStr += "⬛";
+    guessStr += "\u2B1B"; // black square
   }
 
   return guessStr;
@@ -366,7 +366,11 @@ $(window).on('load', function() {
   
   revealMonthDay();
 
-  $("#myInput").on("input", function(e)
+  $(document).not("#myInput").on("click", function(e) {
+    closeAllLists();
+  });
+
+  $("#myInput").on("input click", function(e)
   {
     $("#input-submit").prop('disabled', !validGuess());
 
@@ -374,7 +378,7 @@ $(window).on('load', function() {
     closeAllLists();
     if (!val)
     {
-      return false;
+      val = "";
     }
     currentFocus = -1;
     $("<div>", {id: 'autocomplete-list', class: 'autocomplete-items'}).appendTo("#myAutocomplete");
