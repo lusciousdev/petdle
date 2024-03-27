@@ -233,6 +233,12 @@ function getGuessString()
 
 function share()
 {
+  setTimeout(function()
+  {
+    $("#share-button").html("Share");
+  }, 500);
+  $("#share-button").html("Copied!")
+
   var $temp = $("<textarea>");
   $("body").append($temp);
   $temp.val(getGuessString()).select();
