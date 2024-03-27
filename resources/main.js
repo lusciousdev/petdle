@@ -255,8 +255,8 @@ function closeAllLists()
 function getGuessString()
 {
   var guessStr = `itswill Petdle #{0}
-  
-  `.format(answerDay + 1);
+
+`.format(answerDay + 1);
   
   guesses.forEach(function(val)
   {
@@ -274,6 +274,8 @@ function getGuessString()
   {
     guessStr += "\u2B1B"; // black square
   }
+
+  guessStr += "\n\nhttps://itswill.org/petdle/"
 
   return guessStr;
 }
