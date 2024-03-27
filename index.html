@@ -1,0 +1,65 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>itswill Petdle</title>
+    <link rel="icon" href="./resources/favicon.ico">
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="header">
+        <h1 class="petdl-header">
+          itswill Petdle
+        </h1>
+      </header>
+      <div class="game">
+        <div id="message">
+          <h2>Guess the pet!</h2>
+        </div>
+        <div class="info">
+          <div class="info-row">
+            <div class="info-item" id="info-day">
+              <div class="info-label">Month/Day</div>
+              <div class="info-value-hidden" id="info-day-val">XXXXX</div>
+            </div>
+            <div class="info-item" id="info-year">
+              <div class="info-label">Year</div>
+              <div class="info-value-hidden" id="info-year-val">XXXXX</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-item" id="info-percent">
+              <div class="info-label">Received at X% of droprate</div>
+              <div class="info-value-hidden" id="info-percent-val">XXXXX</div>
+            </div>
+            <div class="info-item" id="info-region">
+              <div class="info-label">Content Region</div>
+              <div class="info-value-hidden" id="info-region-val">XXXXX</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-item" id="info-killcount">
+              <div class="info-label">Total killcount or XP</div>
+              <div class="info-value-hidden" id="info-killcount-val">XXXXX</div>
+            </div>
+            <div class="info-item" id="info-type">
+              <div class="info-label">Pet type</div>
+              <div class="info-value-hidden" id="info-type-val">XXXXX</div>
+            </div>
+          </div>
+        </div>
+        <div class="guess">
+          <form autocomplete="off" autocapitalize="off" onsubmit="return false;">
+            <div id="myAutocomplete" class="autocomplete" style="width:300px;">
+              <input id="myInput" type="text" name="pet-input" placeholder="Kalphite princess">
+            </div>
+            <input id="input-submit" type="submit" value="Guess!" onclick="javascript:submitGuess()">
+        </div>
+      </div>
+  </div>
+  </body>
+  <link rel="stylesheet" type="text/css" href="./resources/style.css">
+  <script src="./resources/jquery-3.7.0.min.js"></script>
+  <script src="./resources/jquery.csv.min.js"></script>
+  <script src="./resources/luxon.min.js"></script>
+  <script src="./resources/main.js"></script>
+</html>
