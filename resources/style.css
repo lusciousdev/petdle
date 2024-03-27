@@ -1,15 +1,35 @@
-:root {
-  --global-max-width: 480px;
+@font-face {
+  font-family: Roobert;
+  src: url(./Roobert-Regular.ttf);
+}
 
+:root {
+  --bg: #0e0e10;
+  --bg-med: #18181b;
+  --bg-light: #1f1f23;
+  --bg-button: #2e2e35;
+  --default-color: #efeff1;
+  --accent-color: #fab4ff;
+  --correct-color: #538d4e;
+  --incorrect-color: #921a1a;
+
+  --global-max-width: 480px;
   --border-radius: 4px;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--default-color);
+  font-family: Roobert, Arial, Helvetica, sans-serif;
+  font-size: 16px;  
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  font: 16px Arial;  
+header {
+  color: var(--accent-color);
 }
 
 /*the container must be positioned relative:*/
@@ -27,32 +47,33 @@ body {
 
 input {
   border: 1px solid transparent;
-  background-color: #f1f1f1;
+  background-color: var(--bg-light);
   padding: 10px;
   font-size: 16px;
 }
 
 input[type=text] {
-  background-color: #f1f1f1;
+  background-color: var(--bg-light);
+  color: var(--default-color);
   flex: 1;
   margin-right: 8px;
 }
 
 input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
+  background-color: var(--correct-color);
+  color: var(--default-color);
   cursor: pointer;
 }
 
 input[type=submit]:disabled {
-  background-color: grey;
-  color: #fff;
+  background-color: var(--bg-button);
+  color: var(--default-color);
   cursor: default;
 }
 
 .autocomplete-items {
   position: absolute;
-  border: 1px solid #d4d4d4;
+  border: 1px solid var(--bg);
   border-bottom: none;
   border-top: none;
   z-index: 99;
@@ -65,19 +86,19 @@ input[type=submit]:disabled {
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
+  background-color: var(--bg-light); 
+  border-bottom: 1px solid var(--bg); 
 }
 
 /*when hovering an item:*/
 .autocomplete-items div:hover {
-  background-color: #e9e9e9; 
+  background-color: var(--bg-button); 
 }
 
 /*when navigating through the items using the arrow keys:*/
 .autocomplete-active {
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
+  background-color: var(--bg-button) !important; 
+  color: var(--default-color); 
 }
 
 .info-row {
@@ -95,7 +116,7 @@ input[type=submit]:disabled {
   align-items: start;
   grid-gap: 1em;
   position: relative;
-  color: var(--color-text);
+  color: var(--default-color);
   min-height: 100%;
   width: var(--global-max-width);
   max-width: var(--global-max-width);
@@ -122,7 +143,7 @@ input[type=submit]:disabled {
   text-align: left;
   position: relative;
   flex: 1;
-  background-color: #f7f7f7;
+  background-color: var(--bg-light);
   padding: 6px 10px;
   border-radius: 5px;
 }
@@ -136,6 +157,31 @@ input[type=submit]:disabled {
 }
 .info-label {
   color: grey;
+}
+
+.info-image, .info-image-hidden {
+  height: 250px;
+  width: 100%;
+  justify-content: center;
+}
+
+#pet-image-container {
+  background-color: var(--default-color);
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#pet-image {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
 }
 
 .info-row, .info-image, .info-image-hidden {
@@ -161,8 +207,8 @@ input[type=submit]:disabled {
 #share-button {  
   width: 142px;
   height: 36px;
-  background-color: rgb(83, 141, 78);
-  color: white;
-  border-color: white;
+  background-color: var(--correct-color);
+  color: var(--default-color);
+  border-color: var(--default-color);
   font-size: 18px;
 }
