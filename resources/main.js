@@ -91,7 +91,7 @@ var pets = [["Abyssal orphan",        "2020-06-22T22:06:00Z",     5653,     2560
             ["Tzrek-jad",             "2019-04-23T21:05:00Z",       16,       67,            "Karamja",      "PvM", "./resources/images/TzRek-Jad.png",            "./resources/images/silhouettes/48.png"],
             ["Vet'ion jr.",           "2023-05-10T00:59:00Z",     1422,     2800,         "Wilderness",      "PvM", "./resources/images/Vet'ion_Jr.png",           "./resources/images/silhouettes/50.png"],
             ["Vorki",                 "2019-03-28T16:35:00Z",     1287,     3000, "Fremennik Province",      "PvM", "./resources/images/Vorki.png",                "./resources/images/silhouettes/51.png"],
-            ["Youngleff",             "2021-07-24T19:20:00Z",     1317,      800,           "Tirannwn",      "PvM", "./resources/images/Youngleff.png",            "./resources/images/silhouettes/52.png"],
+            ["Youngleff",             "2021-07-24T19:20:00Z",     1317,      800,           "Tirannwn",      "PvM", "./resources/images/Youngllef.png",            "./resources/images/silhouettes/52.png"],
             ["Beaver",                "2018-04-28T13:17:00Z",  7090372, 22260000,                "N/A", "Skilling", "./resources/images/Beaver.png",               "./resources/images/silhouettes/5.png"],
             ["Heron",                 "2018-08-17T14:48:00Z", 14700000, 28270000,                "N/A", "Skilling", "./resources/images/Heron.png",                "./resources/images/silhouettes/19.png"],
             ["Rock golem",            "2019-05-21T16:15:00Z", 13900000, 20000000,                "N/A", "Skilling", "./resources/images/Rock_golem.png",           "./resources/images/silhouettes/37.png"],
