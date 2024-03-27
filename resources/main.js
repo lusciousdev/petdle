@@ -1,6 +1,6 @@
 var DateTime = luxon.DateTime;
 
-var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 28, month: 6, year: 2023 }, { zone: "America/Los_Angeles"});
+var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 12, month: 7, year: 2023 }, { zone: "America/Los_Angeles"});
 var todaysDate = DateTime.now().setZone("America/Los_Angeles");
 var daysSinceStart = Math.floor(todaysDate.diff(startDate, 'days').values["days"]);
 
@@ -43,7 +43,7 @@ function testPet(key)
       petDropInfo["region"] = info.allPetList[key]["region"];
       petDropInfo["type"] = info.allPetList[key]["type"];
       petDropInfo["image"] = info.allPetList[key]["following_image_url"];
-      petDropInfo["silhouette"] = info.allPetList[key]["sillhouette_url"];
+      petDropInfo["silhouette"] = info.allPetList[key]["silhouette_url"];
     };
   });
 
@@ -59,7 +59,6 @@ function testPet(key)
   if (petDropInfo)
   {
     $("#info-day-val").html(petDropInfo["datetime"].toFormat("MM/dd"));
-    
     $("#info-year-val").html(petDropInfo["datetime"].toFormat("yyyy"));
   
     var percent = 0;
@@ -133,6 +132,7 @@ function revealYear(correct)
 
   var bgColor = (correct ? "var(--correct-color)" : "var(--incorrect-color)");
   flashBackground($("#info-year"), infoBg, bgColor, 500);
+
 }
 
 function revealPercent(correct)
@@ -229,7 +229,7 @@ function checkMatch(input, pet)
 
 function getGuessString()
 {
-  var guessStr = `itswill Petdle #{0}
+  var guessStr = `Clipper Petdle #{0}
 
 `.format(answerDay + 1);
   
@@ -250,7 +250,7 @@ function getGuessString()
     guessStr += "\u2B1B"; // black square
   }
 
-  guessStr += "\n\nhttps://itswill.org/petdle/"
+  guessStr += "\n\nhttps://itswill.org/clipdle/"
 
   return guessStr;
 }
@@ -427,7 +427,7 @@ $(window).on('load', function() {
       answerInfo["region"] = info.allPetList[key]["region"];
       answerInfo["type"] = info.allPetList[key]["type"];
       answerInfo["image"] = info.allPetList[key]["following_image_url"];
-      answerInfo["silhouette"] = info.allPetList[key]["sillhouette_url"];
+      answerInfo["silhouette"] = info.allPetList[key]["silhouette_url"];
     }
   });
 
@@ -476,7 +476,8 @@ $(window).on('load', function() {
 
         $(itemId).on("click", function(e)
         {
-          $("#myInput").val($(itemId + "-input").val());
+          var id = $(this).attr('id');
+          $("#myInput").val($("#{0}-input".format(id)).val());
           closeAllLists();
           $("#input-submit").prop('disabled', !validGuess());
         });
