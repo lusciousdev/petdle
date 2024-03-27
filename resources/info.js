@@ -530,6 +530,42 @@ var info = (function (exports) {
       "region": "Morytania",
       "type": "PvM", 
       "alt_names": []
+    },
+    "baron": {
+      "name": "Baron",
+      "inventory_image_url": "https://oldschool.runescape.wiki/images/Baron.png?99060",
+      "following_image_url": "./resources/images/Baron.png",
+      "silhouette_url": "./resources/images/silhouettes/57.png",
+      "region": "Troll Country",
+      "type": "PvM",
+      "alt_names": ["Duke Sucellus"]
+    },
+    "lilviathan": {
+      "name": "Lil'viathan",
+      "inventory_image_url": "https://oldschool.runescape.wiki/images/Lil%27viathan.png?99060",
+      "following_image_url": "./resources/images/Lil'viathan.png",
+      "silhouette_url": "./resources/images/silhouettes/59.png",
+      "region": "Abyssal Space",
+      "type": "PvM",
+      "alt_names": ["Leviathan"]
+    },
+    "butch": {
+      "name": "Butch",
+      "inventory_image_url": "https://oldschool.runescape.wiki/images/Butch.png?99060",
+      "following_image_url": "./resources/images/Butch.png",
+      "silhouette_url": "./resources/images/silhouettes/58.png",
+      "region": "Varlamore",
+      "type": "PvM",
+      "alt_names": ["Vardorvis"]
+    },
+    "wisp": {
+      "name": "Wisp",
+      "inventory_image_url": "https://oldschool.runescape.wiki/images/Wisp.png?99060",
+      "following_image_url": "./resources/images/Wisp.png",
+      "silhouette_url": "./resources/images/silhouettes/56.png",
+      "region": "Asgarnia",
+      "type": "PvM",
+      "alt_names": ["The Whisperer"]
     }
   };
 
@@ -586,7 +622,10 @@ var info = (function (exports) {
                      ["lil_creator", "2021-01-07T12:00:00Z", [69], [400]],
                      ["pet_penance_queen", "2021-10-18T12:00:00Z", [917], [1000]],
                      ["metamorphic_dust", "2019-03-15T12:00:00Z", [114], [400]],
-                     ["sanguine_dust", "2022-05-18T12:00:00Z", [952], [275]]];
+                     ["sanguine_dust", "2022-05-18T12:00:00Z", [952], [275]],
+                     ["lilviathan", "2023-08-23T20:15:00Z", [2319], [2500]],
+                     ["wisp", "2023-08-10T23:34:00Z", [859], [2000]],
+                     ["baron", "2023-08-09T13:46:00Z", [3708], [2500]]];
 
   var answerKey = [
     "tzrek_jad",
@@ -634,13 +673,16 @@ var info = (function (exports) {
     "skotos",
     "pet_dark_core",
     "rocky",
+    "lilviathan",
     "youngllef",
     "giant_squirrel",
     "hellpuppy",
+    "baron",
     "pet_dagannoth_prime",
     "ikkle_hydra",
     "pet_chaos_elemental",
     "vetion_jr",
+    "wisp",
     "kalphite_princess",
     "lil_creator",
   ];
