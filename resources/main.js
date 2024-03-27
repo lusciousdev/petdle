@@ -1,3 +1,5 @@
+const { petDropList } = info
+
 var DateTime = luxon.DateTime;
 
 var startDate = DateTime.fromObject({ hour: 0, minute: 0, second: 0, day: 28, month: 6, year: 2023 }, { zone: "America/Los_Angeles"});
@@ -10,7 +12,44 @@ var correctAnswer;
 var answerInfo = {};
 var guesses = [];
 var currentFocus;
-var autocompleteItems = [];
+
+var randDebug = [];
+for (var i = 0; i < petDropList.length; i++)
+{
+  randDebug[i] = 0
+}
+
+function random_answer(day)
+{
+  var constant = Math.pow(2, 15) + 1
+  var prime = 7369
+  var maximum = 1000
+
+  var cycles = Math.floor(day / petDropList.length)
+  var dayInCycle = (day % petDropList.length) + 1
+
+  var seed = cycles
+
+  function nextNorm()
+  {
+    seed *= constant
+    seed += prime
+    seed %= maximum
+
+    return seed / maximum
+  }
+
+  var val = 0
+  for (var i = 0; i < dayInCycle; i++)
+  {
+    val = nextNorm()
+  }
+  var ret = Math.floor(val * petDropList.length)
+
+  randDebug[ret] += 1
+
+  return ret
+}
 
 // First, checks if it isn't implemented yet.
 if (!String.prototype.format) {
@@ -398,7 +437,7 @@ $(window).on('load', function() {
   }
 
   $("#prev-puzzles").empty();
-  for(var i = 0; i < daysSinceStart; i++)
+  for(var i = 0; i < Math.min(petDropList.length, daysSinceStart); i++)
   {
     $("#prev-puzzles").append("<div class='puzzle-link'><a href='{0}'>#{1} - {2}</a></div>".format("?day={0}".format(i + 1), (i + 1).toString().padStart(2, "0"), startDate.plus({ days: i }).toISODate()));
   }
@@ -409,7 +448,7 @@ $(window).on('load', function() {
   }
   else
   {
-    correctAnswer = info.answerKey[info.answerKey.length - 1];
+    correctAnswer = info.answerKey[random_answer(answerDay)];
   }
 
   $("#guess-submit").prop('disabled', !validGuess());
