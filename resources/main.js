@@ -374,12 +374,16 @@ $(window).on('load', function() {
   
   revealMonthDay();
 
-  $(document).not("#myInput").on("click", function(e) {
-    closeAllLists();
+  $(document).on("click", function(e) {
+    if (!$(e.target).is("#myInput"))
+    {
+      closeAllLists();
+    }
   });
 
   $("#myInput").on("input click", function(e)
   {
+    e.preventDefault();
     $("#input-submit").prop('disabled', !validGuess());
 
     var a, b, i, val = this.value;
