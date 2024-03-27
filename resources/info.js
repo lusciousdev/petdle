@@ -530,6 +530,42 @@ var info = (function (exports) {
       "region": "Morytania",
       "type": "PvM", 
       "alt_names": []
+    },
+    "baron": {
+      "name": "Baron",
+      "inventory_image_url": "https://oldschool.runescape.wiki/images/Baron.png?99060",
+      "following_image_url": "./resources/images/Baron.png",
+      "silhouette_url": "./resources/images/silhouettes/57.png",
+      "region": "Troll Country",
+      "type": "PvM",
+      "alt_names": ["Duke Sucellus"]
+    },
+    "lilviathan": {
+      "name": "Lil'viathan",
+      "inventory_image_url": "https://oldschool.runescape.wiki/images/Lil%27viathan.png?99060",
+      "following_image_url": "./resources/images/Lil'viathan.png",
+      "silhouette_url": "./resources/images/silhouettes/59.png",
+      "region": "Abyssal Space",
+      "type": "PvM",
+      "alt_names": ["Leviathan"]
+    },
+    "butch": {
+      "name": "Butch",
+      "inventory_image_url": "https://oldschool.runescape.wiki/images/Butch.png?99060",
+      "following_image_url": "./resources/images/Butch.png",
+      "silhouette_url": "./resources/images/silhouettes/58.png",
+      "region": "Varlamore",
+      "type": "PvM",
+      "alt_names": ["Vardorvis"]
+    },
+    "wisp": {
+      "name": "Wisp",
+      "inventory_image_url": "https://oldschool.runescape.wiki/images/Wisp.png?99060",
+      "following_image_url": "./resources/images/Wisp.png",
+      "silhouette_url": "./resources/images/silhouettes/56.png",
+      "region": "Asgarnia",
+      "type": "PvM",
+      "alt_names": ["The Whisperer"]
     }
   };
 
